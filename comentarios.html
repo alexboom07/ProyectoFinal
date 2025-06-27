@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Déjanos un Comentario - Museo Interactivo Filosófico</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="imagenes\icono.png" type="image/png">
+</head>
+<body>
+    <!-- Navegación -->
+    <header>
+    <nav class="navbar">
+        <div class="icono">
+            <a href="/index.html">
+                <img src="/imagenes/icono.png" alt="Icono Filosofía" />
+                <span>Inicio</span>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li class="nav-item">
+                <a href="/Epocas/Antigua/descripcion.html">Época Antigua</a>
+                <div class="dropdown-menu">
+                    <a href="/Epocas/Antigua/platon.html">Platón</a>
+                    <a href="/Epocas/Antigua/tales-de-mileto.html">Tales de Mileto</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="/Epocas/Medieval/descripcion.html">Época Medieval</a>
+                <div class="dropdown-menu">
+                    <a href="/Epocas/Medieval/tomas-de-aquino.html">Tomás de Aquino</a>
+                    <a href="/Epocas/Medieval/juan-duns-scoto.html">Juan Duns Escoto</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="/Epocas/Moderna/descripcion.html">Época Moderna</a>
+                <div class="dropdown-menu">
+                    <a href="/Epocas/Moderna/jean-paul-sartre.html">Jean Paul Sartre</a>
+                    <a href="/Epocas/Moderna/charles-taylor.html">Charles Taylor</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="/Epocas/Ilustrativa/descripcion.html">Época Ilustrativa</a>
+                <div class="dropdown-menu">
+                    <a href="/Epocas/Ilustrativa/voltaire.html">Voltaire</a>
+                    <a href="/Epocas/Ilustrativa/rousseau.html">Rousseau</a>
+                </div>
+            </li>
+            <li class="nav-item"><a href="\comentarios.html">Déjanos un Comentario</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="contenido">
+        <section class="seccion">
+            <h1>Déjanos un Comentario</h1>
+            <p>Tu opinión es muy importante para nosotros. Comparte tus pensamientos sobre nuestro museo filosófico, sugiere mejoras, o simplemente cuéntanos qué filósofo o escuela filosófica te ha resultado más interesante. Cada comentario nos ayuda a mejorar y enriquecer esta experiencia educativa.</p>
+        </section>
+
+        <section class="seccion">
+            <div class="formulario-container">
+                <form action="https://formsubmit.co/museofilosoficointeractivo@gmail.com" method="POST" class="formulario-mejorado" id="comentarioForm">
+                    <!-- Configuraciones de FormSubmit-->
+                    <input type="hidden" name="_subject" value="Nuevo comentario del Museo Filosófico">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" style="display:none">
+                    
+                    <!-- Campos del formulario -->
+                    <div class="campo-grupo">
+                        <label for="nombre">Nombre completo <span class="required">*</span></label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="email">Correo electrónico <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="asunto">Asunto</label>
+                        <select id="asunto" name="asunto">
+                            <option value="">Selecciona un tema</option>
+                            <option value="Sugerencia">Sugerencia</option>
+                            <option value="Pregunta filosófica">Pregunta filosófica</option>
+                            <option value="Felicitación">Felicitación</option>
+                            <option value="Crítica constructiva">Crítica constructiva</option>
+                            <option value="Propuesta de contenido">Propuesta de contenido</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="filosofo-favorito">¿Cuál es tu filósofo favorito?</label>
+                        <select id="filosofo-favorito" name="filosofo_favorito">
+                            <option value="">Selecciona un filósofo</option>
+                            <optgroup label="Época Antigua">
+                                <option value="Platón">Platón</option>
+                                <option value="Tales de Mileto">Tales de Mileto</option>
+                            </optgroup>
+                            <optgroup label="Época Medieval">
+                                <option value="Tomás de Aquino">Tomás de Aquino</option>
+                                <option value="Juan Duns Escoto">Juan Duns Escoto</option>
+                            </optgroup>
+                            <optgroup label="Época Moderna">
+                                <option value="Jean Paul Sartre">Jean Paul Sartre</option>
+                                <option value="Charles Taylor">Charles Taylor</option>
+                            </optgroup>
+                            <optgroup label="Época Ilustrativa">
+                                <option value="John Locke">John Locke</option>
+                                <option value="Rousseau">Rousseau</option>
+                            </optgroup>
+                            <option value="Otro filósofo">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="comentario">Tu comentario <span class="required">*</span></label>
+                        <textarea id="comentario" name="comentario" rows="6" placeholder="Comparte tus pensamientos, preguntas o sugerencias sobre nuestro museo filosófico..." required></textarea>
+                    </div>
+
+                    <div class="botones-formulario">
+                        <button type="submit" class="btn-enviar" id="btnEnviar">
+                            <span class="btn-texto">Enviar Comentario</span>
+                            <span class="btn-icono">✉</span>
+                        </button>
+                        <button type="reset" class="btn-limpiar">
+                            <span class="btn-texto">Limpiar Formulario</span>
+                            <span class="btn-icono">🗑</span>
+                        </button>
+                    </div>
+                </form>
+
+                <div id="mensaje-resultado" class="mensaje-resultado"></div>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <h2>¿Por qué es importante tu opinión?</h2>
+            <p>Creemos que el diálogo y el intercambio de ideas son fundamentales para el aprendizaje. Tu perspectiva enriquece nuestra comunidad filosófica y nos ayuda a:</p>
+            <ul>
+                <li>Mejorar la presentación de los contenidos filosóficos</li>
+                <li>Incluir nuevos filósofos y corrientes de pensamiento</li>
+                <li>Adaptar la experiencia a las necesidades de nuestros visitantes</li>
+                <li>Fomentar el diálogo filosófico contemporáneo</li>
+                <li>Crear una comunidad de aprendizaje colaborativa</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">
+                            <a href="index.html">
+                                <img src="\imagenes\icono.png" alt="Museo Filosófico Logo">
+                            </a>
+                        </div>
+                        <div class="footer-logo-text">
+                            <h3>Museo Filosófico</h3>
+                            <p>Explorando el pensamiento</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Descubre las grandes escuelas filosóficas que han moldeado el pensamiento humano a través de la historia. Un viaje interactivo por las ideas que transformaron el mundo.
+                    </p>
+                </div>
+
+                <!-- Época Antigua -->
+                <div class="footer-section">
+                    <h4><a href="Epocas\Antigua\descripcion.html">Época Antigua</a></h4>
+                    <ul class="footer-links-list">
+                        <li><a href="Epocas\Antigua\platon.html">Platón</a></li>
+                        <li><a href="Epocas\Antigua\tales-de-mileto.html">Tales de Mileto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Época Medieval -->
+                <div class="footer-section">
+                    <h4><a href="Epocas\Medieval\descripcion.html">Época Medieval</a></h4>
+                    <ul class="footer-links-list">
+                        <li><a href="Epocas\Medieval\juan-duns-scoto.html">Tomás de Aquino</a></li>
+                        <li><a href="Epocas\Medieval\tomas-de-aquino.html">Juan Duns Escoto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Época Moderna -->
+                <div class="footer-section">
+                    <h4><a href="Epocas\Moderna\descripcion.html">Época Moderna</a></h4>
+                    <ul class="footer-links-list">
+                        <li><a href="Epocas\Moderna\jean-paul-sartre.html">Jean Paul Sartre</a></li>
+                        <li><a href="Epocas\Moderna\charles-taylor.html">Charles Taylor</a></li>
+                    </ul>
+                </div>
+
+                <!-- Época Ilustrativa -->
+                <div class="footer-section">
+                    <h4><a href="Epocas\Ilustrativa\descripcion.html">Época Ilustrativa</a></h4>
+                    <ul class="footer-links-list">
+                        <li><a href="Epocas\Ilustrativa\voltaire.html">Voltaire</a></li>
+                        <li><a href="Epocas\Ilustrativa\rousseau.html">Rousseau</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="conalep-banner">
+                    <div class="conalep-logo">
+                        <a href="https://www.conalep.edu.mx/inicio" target="_blank">
+                            <img src="imagenes\conalep-logo.png" alt="CONALEP Logo">
+                        </a>
+                    </div>
+                    <strong>2025 CONALEP 311 Plantel Bahía de Banderas</strong>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('comentarioForm');
+            const btnEnviar = document.getElementById('btnEnviar');
+            
+            form.addEventListener('submit', function() {
+                btnEnviar.innerHTML = '<span class="btn-texto">Enviando...</span><span class="btn-icono">⏳</span>';
+                btnEnviar.disabled = true;
+                form.classList.add('loading');
+            });
+            
+            form.addEventListener('reset', function() {
+                btnEnviar.innerHTML = '<span class="btn-texto">Enviar Comentario</span><span class="btn-icono">✉</span>';
+                btnEnviar.disabled = false;
+                form.classList.remove('loading');
+                document.getElementById('mensaje-resultado').innerHTML = '';
+            });
+            
+            const requiredFields = form.querySelectorAll('[required]');
+            requiredFields.forEach(field => {
+                field.addEventListener('blur', function() {
+                    if (this.value.trim() === '') {
+                        this.style.borderColor = '#f44336';
+                    } else {
+                        this.style.borderColor = '#4CAF50';
+                    }
+                });
+            });
+        });
+    </script>
